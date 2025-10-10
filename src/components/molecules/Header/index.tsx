@@ -17,21 +17,25 @@ const Header = () => {
     router.push("/login");
   };
 
+  const handleLogout = () => {
+    logout();
+    router.push("/");
+  };
   return (
-    <header
-      style={{
-        display: "flex",
-        justifyContent: "space-between",
-        alignItems: "center",
-        padding: "1rem",
-        borderBottom: "1px solid #ccc",
-      }}
-    >
-      <h1>Pokedex</h1>
+    <header className="flex justify-between items-center p-6 bg-yellow-400 border-b-4 border-yellow-600 shadow-lg">
+      <h1 className="text-3xl font-bold text-gray-800 font-mono">🔥 Pokédex</h1>
       {isLoggedIn ? (
-        <button onClick={logout}>Logout</button>
+        <button
+          onClick={handleLogout}
+          className="px-4 py-2 bg-red-500 hover:bg-red-600 text-white font-semibold rounded-lg shadow-md hover:shadow-lg transform hover:scale-105 transition-all duration-200"
+        >
+          Logout
+        </button>
       ) : (
-        <button onClick={handleClick} className="cursor-pointer">
+        <button
+          onClick={handleClick}
+          className="px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:shadow-lg transform hover:scale-105 transition-all duration-200 cursor-pointer"
+        >
           Login
         </button>
       )}

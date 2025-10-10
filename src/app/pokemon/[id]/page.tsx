@@ -1,5 +1,3 @@
-import Image from "next/image";
-import Card from "@/components/atoms/Card";
 import PokemonDetailContainer from "@/components/organisms/PokemonDetailContainer";
 
 interface PokemonDetails {
@@ -35,18 +33,9 @@ async function getPokemonDetails(id: string): Promise<PokemonDetails> {
 }
 
 const PokemonDetailPage = async ({ params }: { params: { id: string } }) => {
-  const pokemon = await getPokemonDetails(params.id);
+  const { id } = await params;
+  const pokemon = await getPokemonDetails(id);
 
-  const fullDetails = {
-    height: pokemon.height,
-    weight: pokemon.weight,
-    types: pokemon.types,
-    abilities: pokemon.abilities,
-  };
-
-  const handleCatch = () => {
-    console.log("catch");
-  };
   return (
     <div className="container mx-auto px-4 py-8 flex justify-center">
       <div className="max-w-2xl w-full">

@@ -48,11 +48,24 @@ const GridCards = ({ pokemonList: initialPokemonList }: GridCardsProps) => {
         ))}
       </div>
       {showPagination && (
-        <div style={{ marginTop: "1rem" }}>
-          <button onClick={prevPage} disabled={offset === 0}>
+        <div className="mt-4 flex gap-2 justify-center">
+          <button
+            onClick={prevPage}
+            disabled={offset === 0}
+            className={`px-4 py-2 rounded text-sm font-medium transition-colors ${
+              offset === 0
+                ? "bg-gray-300 text-gray-500 cursor-not-allowed"
+                : "bg-blue-500 text-white hover:bg-blue-600 cursor-pointer"
+            }`}
+          >
             Previous
           </button>
-          <button onClick={nextPage}>Next</button>
+          <button
+            onClick={nextPage}
+            className="px-4 py-2 bg-blue-500 text-white rounded text-sm font-medium hover:bg-blue-600 cursor-pointer transition-colors"
+          >
+            Next
+          </button>
         </div>
       )}
     </div>

@@ -23,7 +23,6 @@ const Card = ({
   fullDetails,
   handleCatch,
 }: CardProps) => {
-  console.log("fulllll", fullDetails);
   const { isLoggedIn } = useAuthStore();
   return (
     <div
