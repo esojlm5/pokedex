@@ -60,6 +60,7 @@ const GridCards = ({ pokemonList: initialPokemonList }: GridCardsProps) => {
           >
             Previous
           </button>
+          {/* TODO: we need create a button base */}
           <button
             onClick={nextPage}
             className="px-4 py-2 bg-blue-500 text-white rounded text-sm font-medium hover:bg-blue-600 cursor-pointer transition-colors"

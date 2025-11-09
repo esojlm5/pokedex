@@ -26,7 +26,7 @@ const Card = ({
   const { isLoggedIn } = useAuthStore();
   return (
     <div
-      className={`border p-4 rounded-lg shadow-md flex flex-col transition-transform duration-300 ease-in-out ${
+      className={`border p-4 rounded-lg flex flex-col transition-transform duration-300 ease-in-out ${
         handleSelectCard ? "cursor-pointer hover:scale-105 hover:shadow-xl" : ""
       }`}
       onClick={handleSelectCard}

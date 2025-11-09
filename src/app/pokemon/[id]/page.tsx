@@ -1,3 +1,5 @@
+import Image from "next/image";
+import Card from "@/components/atoms/Card";
 import PokemonDetailContainer from "@/components/organisms/PokemonDetailContainer";
 
 interface PokemonDetails {
