@@ -37,7 +37,7 @@ const usePokemonFetch = (initialLimit = 10) => {
         const data: PokemonListResponse = await response.json();
 
         const pokemonWithImages = data.results.map((pokemon) => {
-          const id = pokemon.url.split("/").filter(Boolean).pop();
+          const id = pokemon.url.split("/").filter(Boolean).pop() || "";
           const imageUrl = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${id}.svg`;
           return { ...pokemon, id, imageUrl };
         });

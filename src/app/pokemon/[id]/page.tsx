@@ -1,7 +1,7 @@
 import PokemonDetailContainer from "@/components/organisms/PokemonDetailContainer";
 
-interface PokemonDetails {
-  id: number;
+export interface PokemonDetails {
+  id: string;
   name: string;
   sprites: {
     other: {

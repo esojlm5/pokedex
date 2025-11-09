@@ -2,12 +2,14 @@
 
 import Card from "@/components/atoms/Card";
 import { useCaughtPokemonStore } from "@/store/useCaughtPokemonStore";
+import { PokemonDetails } from "@/app/pokemon/[id]/page";
+import { Pokemon } from "@/store/useCaughtPokemonStore";
 
-const PokemonDetailContainer = ({ pokemon }) => {
+const PokemonDetailContainer = ({ pokemon }: { pokemon: PokemonDetails }) => {
   const { addPokemon } = useCaughtPokemonStore();
 
   const handleCatch = () => {
-    const pokemonToCatch = {
+    const pokemonToCatch: Pokemon = {
       id: pokemon.id,
       name: pokemon.name,
       imageUrl: pokemon.sprites.other.dream_world.front_default,

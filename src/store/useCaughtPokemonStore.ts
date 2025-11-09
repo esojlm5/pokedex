@@ -1,7 +1,7 @@
 import { create } from "zustand";
 import { persist, createJSONStorage } from "zustand/middleware";
 
-interface Pokemon {
+export interface Pokemon {
   id: string;
   name: string;
   imageUrl: string;
