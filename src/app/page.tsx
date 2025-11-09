@@ -1,4 +1,3 @@
-import Image from "next/image";
 import GridCards from "@/components/organisms/GridCards";
 
 export default function Home() {

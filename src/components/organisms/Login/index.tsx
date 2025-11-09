@@ -16,7 +16,7 @@ const LoginOrganism = () => {
     }
   }, [isLoggedIn, router]);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = () => {
     login();
     router.push("/");
   };

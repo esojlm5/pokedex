@@ -16,7 +16,7 @@ const MyPokemons = () => {
       </div>
       <div className="container mx-auto p-4">
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
-          {caughtPokemon.map(({ id, name, imageUrl, ...rest }) => (
+          {caughtPokemon.map(({ id, name, imageUrl }) => (
             <Card key={id} name={name} image={imageUrl} />
           ))}
         </div>

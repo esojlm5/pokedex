@@ -1,10 +1,13 @@
-import React, { useState } from "react";
+import React, { FormEvent, useState } from "react";
 
-const Form = ({ handleSubmit }) => {
+interface Props {
+  handleSubmit: (data: { email: string; password: string }) => void;
+}
+const Form = ({ handleSubmit }: Props) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const onSubmit = (e: any) => {
+  const onSubmit = (e: FormEvent) => {
     e.preventDefault();
     if (email.trim() !== "" && password.trim() !== "") {
       handleSubmit({ email, password });

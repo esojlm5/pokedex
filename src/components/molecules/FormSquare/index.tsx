@@ -1,8 +1,8 @@
 "use client";
-import { useState, useEffect, FormEvent } from "react";
+import { useState, useEffect, FormEvent, ChangeEvent } from "react";
 
 interface Props {
-  onSubmit: (e: any) => void;
+  onSubmit: (e: number[][]) => void;
 }
 
 const FormSquare = ({ onSubmit }: Props) => {
@@ -15,7 +15,7 @@ const FormSquare = ({ onSubmit }: Props) => {
     }
   }, [value]);
 
-  const handleChange = (e: any) => {
+  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     const input = e.target.value;
     setValue(input);
 

@@ -6,13 +6,13 @@ const Square = ({ items }: { items: number[][] }) => {
   const itemsRotated = clockWiser(items);
 
   return (
-    <div className="grid grid-cols-2 gap-10 justify-center  mt-4 ">
+    <div className="grid grid-cols-2 gap-10 justify-center  mt-4 max-w-[700] ml-auto mr-auto">
       <div>
         <h3 className="text-xl text-center">Old values</h3>
         <div
           className={`grid grid-cols-${gridCalc} gap-1  mt-4 text-center bg-black p-1 `}
         >
-          {oldItems.map((row, rowIndex) =>
+          {oldItems.map((row) =>
             row.map((item, index) => (
               <span
                 key={index}
@@ -29,7 +29,7 @@ const Square = ({ items }: { items: number[][] }) => {
         <div
           className={`grid grid-cols-${gridCalc} gap-1 mt-4 text-center bg-black p-1 `}
         >
-          {itemsRotated.map((row, rowIndex) =>
+          {itemsRotated.map((row) =>
             row.map((item, index) => (
               <span
                 key={index}
